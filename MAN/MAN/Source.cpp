@@ -1,11 +1,11 @@
 #include <iostream>
-
+#include "Server.h"
 using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "Rus");
-	cout << "Hello World" << endl;
-	cout << "Привет мир" << endl;
+	Server serv(5400);
+	serv.start();
 	system("pause");
 	return 0;
 }

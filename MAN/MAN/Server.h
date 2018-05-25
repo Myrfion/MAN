@@ -1,8 +1,4 @@
-#pragma comment(lib, "ws2_32.lib")
-#pragma warning(disable: 4996)
-#include <iostream>
-#include <WinSock2.h>
-#include <winsock.h>
+#include "includes.h"
 
 using namespace std;
 class Client {
@@ -12,7 +8,8 @@ class Client {
 
 class Server {
 	int Port;
-	SOCKET s;
+	SOCKET sListening;
+	sockaddr_in saddrListening;
 public:
 	Server(int aPort) : Port{aPort}{}
 	bool add();
